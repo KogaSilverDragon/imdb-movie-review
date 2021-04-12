@@ -1,0 +1,51 @@
+<div class="container pt-4"
+     *ngIf="movie">
+  <div class="box">
+    <a class="button is-primary"
+       routerLink="/movies">
+      <span class="icon">
+        <i class="mdi mdi-arrow-left"></i>
+      </span>
+      <span>Back</span>
+    </a>
+  </div>
+  <section>
+    <div class="box">
+      <article class="columns">
+        <div class="column is-4">
+          <figure class="image">
+            <img [src]="movie.poster || 'https://bulma.io/images/placeholders/320x480.png'">
+          </figure>
+        </div>
+        <div class="column is-8">
+          <h2 class="title">{{movie.title}}</h2>
+          <p>{{movie.overview}}</p>
+          <div class="mt-2 columns is-multiline"
+               *ngIf="rating">
+            <div class="column is-6">
+              <app-star-rating [rating]="rating.scriptRating"
+                               title="Script rating"
+                               (rateChange)="updateRating('scriptRating', $event)"></app-star-rating>
+            </div>
+            <div class="column is-6">
+              <app-star-rating [rating]="rating.photoRating"
+                               title="Photography rating"
+                               (rateChange)="updateRating('photoRating', $event)"></app-star-rating>
+            </div>
+            <div class="column is-6">
+              <app-star-rating [rating]="rating.sfxRating"
+                               title="Special Effects rating"
+                               (rateChange)="updateRating('sfxRating', $event)"></app-star-rating>
+            </div>
+            <div class="column is-6">
+              <app-star-rating [rating]="rating.castRating"
+                               title="Cast rating"
+                               (rateChange)="updateRating('castRating', $event)"></app-star-rating>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</div>

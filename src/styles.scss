@@ -1,0 +1,9 @@
+@import "~bulma/sass/base/minireset";
+@import "~bulma";
+@import "~@mdi/font/scss/materialdesignicons";
+
+html { overflow: auto; }
+body {
+  min-height: 100vh;
+  background-color: $black-ter;
+}

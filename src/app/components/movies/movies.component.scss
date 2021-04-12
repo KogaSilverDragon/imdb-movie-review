@@ -1,0 +1,12 @@
+.movie-card {
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

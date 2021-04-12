@@ -1,0 +1,59 @@
+<div class="message">
+  <div class="message-header">
+    <p>{{title}}</p>
+  </div>
+  <div class="message-body is-paddingless">
+    <div class="buttons is-centered">
+      <div class="button is-text has-text-warning"
+           (click)="setRating(1)">
+        <span class="icon is-small">
+          <i class="mdi"
+             [ngClass]="{
+                'mdi-star': rating >= 1,
+                'mdi-star-outline': rating < 1
+             }"></i>
+        </span>
+      </div>
+      <div class="button is-text has-text-warning"
+           (click)="setRating(2)">
+        <span class="icon is-small">
+          <i class="mdi"
+             [ngClass]="{
+                'mdi-star': rating >= 2,
+                'mdi-star-outline': rating < 2
+             }"></i>
+        </span>
+      </div>
+      <div class="button is-text has-text-warning"
+           (click)="setRating(3)">
+        <span class="icon is-small">
+          <i class="mdi"
+             [ngClass]="{
+                'mdi-star': rating >= 3,
+                'mdi-star-outline': rating < 3
+             }"></i>
+        </span>
+      </div>
+      <div class="button is-text has-text-warning"
+           (click)="setRating(4)">
+        <span class="icon is-small">
+          <i class="mdi"
+             [ngClass]="{
+                'mdi-star': rating >= 4,
+                'mdi-star-outline': rating < 4
+             }"></i>
+        </span>
+      </div>
+      <div class="button is-text has-text-warning"
+           (click)="setRating(5)">
+        <span class="icon is-small">
+          <i class="mdi"
+             [ngClass]="{
+                'mdi-star': rating >= 5,
+                'mdi-star-outline': rating < 5
+             }"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
